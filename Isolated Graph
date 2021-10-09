@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<conio.h>
+
+main()
+{
+	int i,j;
+	int count2;
+	int m,n,a[10][10];
+	printf("Enter The No of edge and vertice\n");
+	scanf("%d%d",&m,&n);
+	printf("Enter the adjacency matix \n");
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<n;j++)
+		{
+			scanf("%d",&a[i][j]);
+		}
+	}
+	for(i=0;i<m;i++)
+	{
+		count2=0;
+		for(j=0;j<n;j++)
+		{
+			if(a[i][j]==1)
+			{
+				count2=count2+1;
+			}
+		}
+		printf("Counter is = %d",count2);
+		if(count2==0)
+		{
+			printf("Isolated Vertex found= %d \n",i+1);
+		}
+		else
+		{
+			printf(" No Isoloated vertex found= %d \n",i+1);
+		}
+	}
+}
